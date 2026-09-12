@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodGo - Giao Đồ Ăn Tươi Ngon, Nhanh Chóng Tận Nơi</title>
+  <meta name="description" content="Khám phá và đặt món ăn tươi ngon từ hàng trăm nhà hàng yêu thích cùng FoodGo. Giao hàng nóng hổi trong 20 phút.">
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <div class="brand-logo">
+        <a href="#hero" class="logo-link" aria-label="Trang chủ FoodGo">
+          <img src="res/logo.png" alt="FoodGo Logo" class="logo-img" onerror="this.style.display='none'">
+          <span class="logo-text">Food<span class="logo-accent">Go</span></span>
+        </a>
+      </div>
+
+      <nav class="main-navigation" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">Giới thiệu</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Lợi ích</a></li>
+          <li class="nav-item"><a href="#featured-dishes" class="nav-link">Món nổi bật</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link">Cách hoạt động</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-action">
+        <a href="#featured-dishes" class="btn btn-primary">Đặt món ngay</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="site-main">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon" aria-hidden="true">⚡</span> Giao hàng hỏa tốc trong 20 phút
+          </div>
+          <h1 class="hero-title">Đồ ăn ngon từ quán quen, giao ngay trước cửa nhà cùng FoodGo</h1>
+          <p class="hero-description">
+            Khám phá hàng trăm thực đơn hấp dẫn từ các nhà hàng được yêu thích nhất xung quanh bạn. 
+            Đặt hàng nhanh gọn chỉ với vài cú chạm, tận hưởng bữa ăn ấm nóng mọi lúc mọi nơi.
+          </p>
+          <div class="hero-actions">
+            <a href="#featured-dishes" class="btn btn-primary btn-hero">Đặt món ngay</a>
+            <a href="#how-it-works" class="btn btn-secondary btn-hero">Xem cách hoạt động</a>
+          </div>
+          
+          <div class="hero-trust">
+            <div class="trust-avatars" aria-hidden="true">
+              <span class="trust-dot">⭐</span>
+            </div>
+            <div class="trust-text">
+              <strong>4.9/5</strong> từ hơn 10.000+ đánh giá tin dùng
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-card">
+            <img src="res/hero-banner.png" alt="Thực đơn thịnh soạn được giao tận nơi bởi FoodGo" class="hero-image" onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80'">
+            <div class="hero-floating-tag tag-top">
+              <span class="tag-icon" aria-hidden="true">🔥</span>
+              <div>
+                <strong>Freeship</strong>
+                <small>Đơn đầu tiên</small>
+              </div>
+            </div>
+            <div class="hero-floating-tag tag-bottom">
+              <span class="tag-icon" aria-hidden="true">⏱️</span>
+              <div>
+                <strong>20 phút</strong>
+                <small>Giao tận tay</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SERVICE SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Về chúng tôi</span>
+          <h2 class="section-title">FoodGo là gì?</h2>
+          <p class="section-subtitle">Cầu nối ẩm thực hoàn hảo giữa bạn và hàng nghìn quán ăn chất lượng</p>
+        </header>
+        <div class="about-content-wrapper">
+          <div class="about-text-block">
+            <p>
+              <strong>FoodGo</strong> là nền tảng công nghệ hỗ trợ tìm kiếm, lựa chọn và giao nhận đồ ăn trực tuyến. 
+              Chúng tôi giải quyết bài toán thiếu thời gian nấu nướng, ngại ra đường vào giờ cao điểm hoặc thời tiết xấu 
+              của dân văn phòng, học sinh - sinh viên và các gia đình hiện đại.
+            </p>
+            <p>
+              Với sứ mệnh <em>"Ăn ngon không cần chờ"</em>, FoodGo cam kết giữ trọn hương vị nguyên bản của món ăn 
+              nhờ đội ngũ giao hàng chuyên nghiệp và mạng lưới đối tác nhà hàng đa dạng trên toàn thành phố.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="check-icon" aria-hidden="true">✓</span> Món ăn luôn giữ độ nóng hổi
+              </div>
+              <div class="highlight-item">
+                <span class="check-icon" aria-hidden="true">✓</span> Giá niêm yết chuẩn nhà hàng
+              </div>
+              <div class="highlight-item">
+                <span class="check-icon" aria-hidden="true">✓</span> Hỗ trợ chăm sóc khách hàng 24/7
+              </div>
+            </div>
+          </div>
+          <div class="about-stats-block">
+            <div class="stat-card">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Nhà hàng đối tác</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">20.000+</span>
+              <span class="stat-label">Đơn hàng hoàn tất mỗi tuần</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Khách hàng hài lòng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES / BENEFITS SECTION -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Lợi ích vượt trội</span>
+          <h2 class="section-title">Tại sao bạn nên chọn FoodGo?</h2>
+          <p class="section-subtitle">Tối ưu trải nghiệm thưởng thức ẩm thực của bạn mỗi ngày</p>
+        </header>
+
+        <div class="features-grid">
+          <!-- Lợi ích 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">🍔</div>
+            <h3 class="feature-title">Đa dạng món ăn & nhà hàng</h3>
+            <p class="feature-description">Từ ẩm thực đường phố, trà sữa đến các món Á - Âu cao cấp, mọi nhu cầu ẩm thực đều có tại đây.</p>
+          </article>
+
+          <!-- Lợi ích 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">⚡</div>
+            <h3 class="feature-title">Giao hàng nhanh chóng</h3>
+            <p class="feature-description">Thuật toán điều phối shipper thông minh giúp đơn hàng được giao đến bạn chỉ trong 20-30 phút.</p>
+          </article>
+
+          <!-- Lợi ích 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">📍</div>
+            <h3 class="feature-title">Theo dõi đơn hàng thời gian thực</h3>
+            <p class="feature-description">Chủ động kiểm tra lộ trình của shipper và tình trạng chuẩn bị món từ bếp đến cửa nhà.</p>
+          </article>
+
+          <!-- Lợi ích 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">💳</div>
+            <h3 class="feature-title">Thanh toán linh hoạt & bảo mật</h3>
+            <p class="feature-description">Hỗ trợ tiền mặt khi nhận hàng (COD), ví điện tử MoMo, ZaloPay, thẻ ngân hàng hoặc QR Code.</p>
+          </article>
+
+          <!-- Lợi ích 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">🎁</div>
+            <h3 class="feature-title">Ưu đãi & voucher hàng ngày</h3>
+            <p class="feature-description">Giảm giá món độc quyền, miễn phí ship giờ vàng và tích lũy điểm thưởng không giới hạn.</p>
+          </article>
+
+          <!-- Lợi ích 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">⭐</div>
+            <h3 class="feature-title">Đánh giá minh bạch, chuẩn vị</h3>
+            <p class="feature-description">Hàng ngàn review chân thật từ cộng đồng giúp bạn dễ dàng chọn quán ngon chuẩn gu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED DISHES & RESTAURANTS -->
+    <section class="dishes-section" id="featured-dishes">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Thực đơn hôm nay</span>
+          <h2 class="section-title">Món Ngon & Nhà Hàng Nổi Bật</h2>
+          <p class="section-subtitle">Gợi ý những món ăn được đặt nhiều nhất hôm nay</p>
+        </header>
+
+        <div class="dishes-grid">
+          <!-- Dish Item 1 -->
+          <article class="dish-card">
+            <div class="dish-thumbnail-wrapper">
+              <img src="res/burger.jpg" alt="Burger Bò Phô Mai Chảy" class="dish-image" onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80'">
+              <span class="dish-badge">Bán chạy nhất</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-name">Burger Bò Phô Mai Chảy</h3>
+              <p class="restaurant-name">📍 Tiệm Burger Béo - 1.2 km</p>
+              <p class="dish-description">Thịt bò nhập khẩu nướng than hoa kết hợp lớp phô mai cheddar tan chảy thơm béo.</p>
+              <div class="dish-meta">
+                <span class="dish-price">75.000 <small>đ</small></span>
+                <a href="#order-now" class="btn btn-sm btn-primary">Chọn món</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish Item 2 -->
+          <article class="dish-card">
+            <div class="dish-thumbnail-wrapper">
+              <img src="res/pho.jpg" alt="Phở Bò Tái Lăn Hà Nội" class="dish-image" onerror="this.src='https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=600&q=80'">
+              <span class="dish-badge badge-popular">Món truyền thống</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-name">Phở Bò Tái Lăn Hà Nội</h3>
+              <p class="restaurant-name">📍 Phở Cụ Cử - 2.5 km</p>
+              <p class="dish-description">Nước dùng hầm xương 24h thanh ngọt, thịt bò xào tỏi thơm lừng đậm đà.</p>
+              <div class="dish-meta">
+                <span class="dish-price">55.000 <small>đ</small></span>
+                <a href="#order-now" class="btn btn-sm btn-primary">Chọn món</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish Item 3 -->
+          <article class="dish-card">
+            <div class="dish-thumbnail-wrapper">
+              <img src="res/pizza.jpg" alt="Pizza Hải Sản Nhiệt Đới" class="dish-image" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80'">
+              <span class="dish-badge">Ưu đãi 20%</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-name">Pizza Hải Sản Nhiệt Đới</h3>
+              <p class="restaurant-name">📍 The Italian Corner - 3.0 km</p>
+              <p class="dish-description">Tôm tươi, mực giòn, ớt chuông và phô mai mozzarella nướng giòn rụm.</p>
+              <div class="dish-meta">
+                <span class="dish-price">189.000 <small>đ</small></span>
+                <a href="#order-now" class="btn btn-sm btn-primary">Chọn món</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish Item 4 -->
+          <article class="dish-card">
+            <div class="dish-thumbnail-wrapper">
+              <img src="res/milktea.jpg" alt="Trà Sữa Trân Châu Đường Đen" class="dish-image" onerror="this.src='https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=600&q=80'">
+              <span class="dish-badge badge-tea">Đồ uống hot</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-name">Trà Sữa Trân Châu Đường Đen</h3>
+              <p class="restaurant-name">📍 Toco Tea House - 800m</p>
+              <p class="dish-description">Vị trà thanh dịu kết hợp trân châu thủ công mềm dẻo, ngọt thanh vừa vị.</p>
+              <div class="dish-meta">
+                <span class="dish-price">42.000 <small>đ</small></span>
+                <a href="#order-now" class="btn btn-sm btn-primary">Chọn món</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOW IT WORKS SECTION -->
+    <section class="steps-section" id="how-it-works">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Quy trình đơn giản</span>
+          <h2 class="section-title">Cách Hoạt Động Cực Đơn Giản</h2>
+          <p class="section-subtitle">Chỉ với 4 bước để có ngay bữa ăn ưng ý trên bàn</p>
+        </header>
+
+        <ol class="steps-list">
+          <li class="step-item">
+            <div class="step-header">
+              <div class="step-number" aria-hidden="true">1</div>
+            </div>
+            <h3 class="step-title">Chọn món ăn hoặc nhà hàng</h3>
+            <p class="step-description">Tìm kiếm theo danh mục, vị trí hiện tại hoặc tên món ăn bạn đang thèm.</p>
+          </li>
+          <li class="step-item">
+            <div class="step-header">
+              <div class="step-number" aria-hidden="true">2</div>
+            </div>
+            <h3 class="step-title">Thêm vào giỏ hàng</h3>
+            <p class="step-description">Tùy chỉnh số lượng, ghi chú hương vị đặc biệt cho đầu bếp nếu cần.</p>
+          </li>
+          <li class="step-item">
+            <div class="step-header">
+              <div class="step-number" aria-hidden="true">3</div>
+            </div>
+            <h3 class="step-title">Xác nhận địa chỉ & thanh toán</h3>
+            <p class="step-description">Chọn địa chỉ giao hàng và phương thức thanh toán an toàn, thuận tiện nhất.</p>
+          </li>
+          <li class="step-item">
+            <div class="step-header">
+              <div class="step-number" aria-hidden="true">4</div>
+            </div>
+            <h3 class="step-title">Theo dõi & nhận đồ ăn</h3>
+            <p class="step-description">Nhận thông báo khi shipper xuất phát và sẵn sàng thưởng thức đồ ăn còn nóng.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION SECTION -->
+    <section class="cta-section" id="order-now">
+      <div class="container cta-container">
+        <div class="cta-badge">Ăn Ngon Mỗi Ngày</div>
+        <h2 class="cta-title">Đói rồi? Đặt món ngay cùng FoodGo!</h2>
+        <p class="cta-subtitle">Hàng trăm ưu đãi giảm giá lên đến 50% đang chờ đón bạn.</p>
+        <div class="cta-actions">
+          <a href="#featured-dishes" class="btn btn-primary btn-large">Bắt đầu đặt món</a>
+          <a href="#how-it-works" class="btn btn-white btn-large">Tìm hiểu thêm</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col footer-brand">
+        <div class="brand-logo footer-logo">
+          <span class="logo-text">Food<span class="logo-accent">Go</span></span>
+        </div>
+        <p class="footer-bio">Dịch vụ giao đồ ăn đáng tin cậy hàng đầu, mang hương vị tuyệt hảo đến tận cửa nhà bạn chỉ trong tích tắc.</p>
+        <div class="footer-app-badges">
+          <span class="app-pill">📱 Tải App FoodGo</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-nav">
+        <h4 class="footer-heading">Liên kết nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Trang chủ</a></li>
+          <li><a href="#about">Về chúng tôi</a></li>
+          <li><a href="#features">Tính năng nổi bật</a></li>
+          <li><a href="#featured-dishes">Thực đơn hot</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4 class="footer-heading">Thông tin liên hệ</h4>
+        <ul class="contact-list">
+          <li><strong>Hotline:</strong> 1900 xxxx (8:00 - 22:00)</li>
+          <li><strong>Email:</strong> support@foodgo.vn</li>
+          <li><strong>Địa chỉ:</strong> Tòa nhà FoodGo, Q. Cầu Giấy, Hà Nội</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-social">
+        <h4 class="footer-heading">Kết nối với chúng tôi</h4>
+        <ul class="social-links">
+          <li><a href="#facebook" class="social-link">Facebook FoodGo</a></li>
+          <li><a href="#instagram" class="social-link">Instagram FoodGo</a></li>
+          <li><a href="#tiktok" class="social-link">TikTok FoodGo</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; 2026 FoodGo Việt Nam. Toàn bộ bản quyền được bảo lưu.</p>
+        <div class="footer-policy">
+          <a href="#privacy">Chính sách bảo mật</a> &bull; <a href="#terms">Điều khoản dịch vụ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
