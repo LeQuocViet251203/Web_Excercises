@@ -1,0 +1,252 @@
+/* =============================================================================
+   responsive.css — Thích ứng màn hình
+   -----------------------------------------------------------------------------
+   Bố cục gốc là web app trên desktop (các file CSS trước). File này chỉ điều chỉnh
+   bố cục đó cho laptop, tablet và mobile — không thay đổi cấu trúc trang.
+   Breakpoint theo hướng desktop-first (max-width), từ lớn đến nhỏ.
+   ========================================================================== */
+
+/* Laptop (≤ 1200px) -------------------------------------------------------- */
+@media (max-width: 1200px) {
+  :root {
+    --section-padding: 5rem;
+    --fs-h1: 3.25rem;
+  }
+
+  .hero__inner {
+    gap: var(--space-7);
+  }
+}
+
+/* Laptop nhỏ (≤ 1140px): thu gọn header để thanh điều hướng vừa một hàng */
+@media (max-width: 1140px) {
+  .site-header__inner {
+    gap: var(--space-4);
+  }
+
+  .brand__name {
+    display: none;
+  }
+
+  .site-nav {
+    gap: var(--space-3);
+  }
+}
+
+/* Tablet ngang (≤ 1024px) -------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --timeline-period-width: 8.5rem;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Tablet dọc (≤ 960px): thanh điều hướng chuyển thành menu thả xuống ------- */
+@media (max-width: 960px) {
+  :root {
+    --fs-h1: 2.875rem;
+    --fs-h2: 2rem;
+  }
+
+  .brand__name {
+    display: inline;
+  }
+
+  .nav-toggle {
+    display: inline-grid;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+    margin: 0;
+    padding: var(--space-3) var(--container-padding) var(--space-5);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition:
+      opacity var(--duration) var(--ease),
+      transform var(--duration) var(--ease),
+      visibility 0s linear var(--duration);
+  }
+
+  .site-header.is-menu-open .site-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+  }
+
+  .site-nav__link {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--fs-base);
+  }
+
+  .site-nav__actions .button {
+    flex: 1;
+    min-height: 2.75rem;
+  }
+
+  .hero__inner {
+    gap: var(--space-6);
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .highlight:nth-child(2n + 1) {
+    border-left: 0;
+  }
+
+  .highlight:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Mobile ngang / tablet nhỏ (≤ 768px): nội dung xếp một cột ---------------- */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1.25rem;
+    --header-height: 3.75rem;
+    --section-padding: 4rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.75rem;
+    --photo-offset: 0.75rem;
+  }
+
+  .hero {
+    padding-block: var(--space-7) var(--space-6);
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__photo {
+    order: -1;
+    justify-self: start;
+  }
+
+  .highlights {
+    margin-top: var(--space-7);
+  }
+
+  .section__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .project-grid,
+  .award-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Timeline: thời gian nằm trên thẻ, trục dọc ở mép trái */
+  .timeline {
+    --timeline-axis: 0.375rem;
+  }
+
+  .timeline__item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-2);
+    padding-left: var(--space-6);
+  }
+
+  .timeline__item::before {
+    top: 0.85rem;
+  }
+
+  .timeline__period {
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+/* Mobile (≤ 520px) --------------------------------------------------------- */
+@media (max-width: 520px) {
+  :root {
+    --fs-h1: 2.125rem;
+    --fs-lg: 1.0625rem;
+  }
+
+  .hero__actions .button {
+    flex: 1 1 auto;
+  }
+
+  .highlight {
+    padding: var(--space-4);
+  }
+
+  .highlight__value {
+    font-size: 1.25rem;
+  }
+
+  .skill-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skill-card,
+  .project-card,
+  .award-card,
+  .about__aside {
+    padding: var(--space-5);
+  }
+
+  .timeline__card {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* Thẻ liên hệ gọn hơn để email / đường dẫn chỉ xuống dòng tại "@" hoặc "/" */
+  .contact-card {
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .contact-card__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .contact-card .icon-button {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .award-card {
+    flex-direction: column;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

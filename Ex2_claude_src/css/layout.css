@@ -1,0 +1,192 @@
+/* =============================================================================
+   layout.css — Khung web app
+   -----------------------------------------------------------------------------
+   Header cố định + thanh điều hướng, cấu trúc section, footer.
+   ========================================================================== */
+
+/* Header ------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-header-bg);
+  border-bottom: 1px solid transparent;
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  transition:
+    border-color var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  height: var(--header-height);
+}
+
+.brand {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 700;
+}
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.brand__name {
+  white-space: nowrap;
+}
+
+/* Thanh điều hướng --------------------------------------------------------- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-left: auto;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.site-nav__link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  white-space: nowrap;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition:
+    color var(--duration) var(--ease),
+    background-color var(--duration) var(--ease);
+}
+
+.site-nav__link[aria-current] {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.site-nav__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Nút mở menu — chỉ hiện trên màn hình nhỏ (xem responsive.css) */
+.nav-toggle {
+  display: none;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.nav-toggle .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Section ------------------------------------------------------------------ */
+main {
+  counter-reset: section;
+}
+
+.section {
+  padding-block: var(--section-padding);
+  border-top: 1px solid var(--color-border);
+  counter-increment: section; /* Section bị ẩn (display: none) không được đánh số */
+}
+
+.section--alt {
+  background: var(--color-surface);
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-7);
+}
+
+.section__header::before {
+  content: counter(section, decimal-leading-zero);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.section__title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+}
+
+/* Footer ------------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+}
+
+.site-footer__copy {
+  font-size: var(--fs-sm);
+  color: var(--color-text-subtle);
+}
+
+.site-footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+@media (hover: hover) {
+  .site-nav__link:hover {
+    color: var(--color-text);
+    background: var(--color-surface-muted);
+  }
+
+  .site-nav__link[aria-current]:hover {
+    color: var(--color-accent);
+    background: var(--color-accent-soft);
+  }
+
+  .nav-toggle:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-surface-muted);
+  }
+}

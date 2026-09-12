@@ -1,0 +1,109 @@
+/* =============================================================================
+   tokens.css — Biến thiết kế
+   -----------------------------------------------------------------------------
+   Màu sắc, chữ, khoảng cách, bo góc, bóng và kích thước bố cục của web app.
+   Giá trị mặc định là bố cục desktop; css/responsive.css ghi đè cho màn hình nhỏ.
+   ========================================================================== */
+:root {
+  color-scheme: light dark;
+
+  /* Màu */
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f3f8;
+  --color-border: #e2e6ee;
+  --color-border-strong: #cdd3df;
+  --color-text: #121826;
+  --color-text-muted: #4a5467;
+  --color-text-subtle: #687286;
+  --color-accent: #3451d1;
+  --color-accent-hover: #2a43b3;
+  --color-accent-soft: #eaeefd;
+  --color-on-accent: #ffffff;
+  --color-success: #12805c;
+  --color-award: #95640a;
+  --color-award-soft: #fdf2d8;
+  --color-glow: rgba(52, 81, 209, 0.1);
+  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --color-photo-frame: #ffffff; /* Luôn trắng để hợp với nền trắng của ảnh chân dung */
+  --color-toast-bg: #121826;
+  --color-toast-text: #ffffff;
+
+  /* Chữ */
+  --font-sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.1875rem;
+  --fs-h3: 1.125rem;
+  --fs-h2: 2.25rem;
+  --fs-h1: 3.5rem;
+  --lh-tight: 1.15;
+  --lh-snug: 1.45;
+  --lh-body: 1.7;
+
+  /* Khoảng cách */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --section-padding: 5.5rem;
+
+  /* Kích thước bố cục */
+  --container-max: 1160px;
+  --container-padding: 2rem;
+  --header-height: 4.25rem;
+  --photo-size: 236px; /* Bằng kích thước gốc của res/avatar.jpg để ảnh sắc nét */
+  --photo-offset: 1.25rem;
+  --timeline-period-width: 10rem;
+
+  /* Bo góc */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Bóng */
+  --shadow-sm: 0 1px 2px rgba(18, 24, 38, 0.05);
+  --shadow-md: 0 10px 24px -12px rgba(18, 24, 38, 0.2);
+  --shadow-lg: 0 24px 48px -20px rgba(18, 24, 38, 0.25);
+
+  /* Chuyển động */
+  --duration: 200ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Giao diện tối — tự áp dụng theo cài đặt hệ điều hành */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0b0e15;
+    --color-surface: #131823;
+    --color-surface-muted: #1a202c;
+    --color-border: #252c3a;
+    --color-border-strong: #364051;
+    --color-text: #edf0f6;
+    --color-text-muted: #b3bbca;
+    --color-text-subtle: #8b94a7;
+    --color-accent: #8299ff;
+    --color-accent-hover: #9dafff;
+    --color-accent-soft: rgba(130, 153, 255, 0.14);
+    --color-on-accent: #0b0e15;
+    --color-success: #5ad6a6;
+    --color-award: #f2c14e;
+    --color-award-soft: rgba(242, 193, 78, 0.12);
+    --color-glow: rgba(130, 153, 255, 0.12);
+    --color-header-bg: rgba(19, 24, 35, 0.85);
+    --color-toast-bg: #edf0f6;
+    --color-toast-text: #0b0e15;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 10px 24px -12px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 24px 48px -20px rgba(0, 0, 0, 0.7);
+  }
+}

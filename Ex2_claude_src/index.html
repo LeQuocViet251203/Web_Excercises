@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tiêu đề & mô tả mặc định; js/render.js cập nhật lại theo js/data.js -->
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio cá nhân." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Font hỗ trợ tốt tiếng Việt; khi không có mạng sẽ tự dùng font hệ thống -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" />
+
+  <!-- CSS: biến thiết kế → nền tảng → khung web app → thành phần → nội dung → thích ứng màn hình (sau cùng) -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- JS: icon & chữ giao diện → dữ liệu → tiện ích → render → tương tác → khởi chạy -->
+  <script src="js/icons.js" defer></script>
+  <script src="js/strings.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/render.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua thanh điều hướng</a>
+
+  <!-- ===================== HEADER & NAVBAR ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" id="brand-mark" aria-hidden="true"></span>
+        <span class="brand__name" id="brand-name"></span>
+      </a>
+
+      <!-- Mục điều hướng được tạo tự động từ các section có data-nav-label -->
+      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+        <ul class="site-nav__list" id="nav-list"></ul>
+        <div class="site-nav__actions" id="header-actions"></div>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false"></button>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow" id="hero-role"></p>
+          <h1 class="hero__name" id="hero-name"></h1>
+          <p class="hero__tagline" id="hero-tagline"></p>
+          <ul class="hero__meta" id="hero-meta"></ul>
+          <div class="hero__actions" id="hero-actions"></div>
+        </div>
+
+        <figure class="hero__photo" id="hero-photo">
+          <div class="hero__frame">
+            <img class="hero__avatar" id="hero-avatar" alt="" width="236" height="236" decoding="async" />
+          </div>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="highlights" id="highlights" aria-label="Thành tích nổi bật"></ul>
+      </div>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section class="section" id="gioi-thieu" data-nav-label="Giới thiệu" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="about-title">Giới thiệu</h2>
+        </div>
+        <div class="about">
+          <div class="about__summary" id="about-summary"></div>
+          <aside class="card about__aside" id="about-aside">
+            <div class="about__group">
+              <h3 class="about__label">Lĩnh vực quan tâm</h3>
+              <ul class="chips" id="about-interests"></ul>
+            </div>
+            <div class="about__group">
+              <h3 class="about__label">Trọng tâm</h3>
+              <ul class="chips" id="about-focus"></ul>
+            </div>
+            <div class="about__group">
+              <h3 class="about__label">Hoạt động nghiên cứu</h3>
+              <ul class="research-list" id="about-research"></ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kỹ năng -->
+    <section class="section section--alt" id="ky-nang" data-nav-label="Kỹ năng" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="skills-title">Kỹ năng</h2>
+        </div>
+        <ul class="skill-grid" id="skill-groups"></ul>
+      </div>
+    </section>
+
+    <!-- Kinh nghiệm -->
+    <section class="section" id="kinh-nghiem" data-nav-label="Kinh nghiệm" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="experience-title">Kinh nghiệm làm việc</h2>
+        </div>
+        <ol class="timeline" id="experience-list"></ol>
+      </div>
+    </section>
+
+    <!-- Dự án -->
+    <section class="section section--alt" id="du-an" data-nav-label="Dự án" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="projects-title">Dự án tiêu biểu</h2>
+        </div>
+        <ul class="project-grid" id="project-list"></ul>
+      </div>
+    </section>
+
+    <!-- Học vấn -->
+    <section class="section" id="hoc-van" data-nav-label="Học vấn" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="education-title">Học vấn</h2>
+        </div>
+        <ol class="timeline" id="education-list"></ol>
+      </div>
+    </section>
+
+    <!-- Giải thưởng -->
+    <section class="section section--alt" id="giai-thuong" data-nav-label="Giải thưởng" aria-labelledby="awards-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="awards-title">Giải thưởng &amp; học bổng</h2>
+        </div>
+        <ul class="award-grid" id="award-list"></ul>
+      </div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section class="section" id="lien-he" data-nav-label="Liên hệ" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__intro">
+          <div class="section__header">
+            <h2 class="section__title" id="contact-title">Liên hệ</h2>
+          </div>
+          <p class="contact__lead">Kết nối qua các kênh bên cạnh hoặc xem CV đầy đủ.</p>
+          <p class="contact__location" id="contact-location"></p>
+        </div>
+        <ul class="contact-grid" id="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy" id="footer-copy"></p>
+      <div class="site-footer__actions">
+        <button class="button button--ghost button--sm" id="share-button" type="button"><span>Chia sẻ trang</span></button>
+        <a class="button button--ghost button--sm" id="back-to-top" href="#top"><span>Lên đầu trang</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Thông báo ngắn (sao chép email, chia sẻ) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">Vui lòng bật JavaScript để xem đầy đủ nội dung trang.</p>
+  </noscript>
+</body>
+</html>
