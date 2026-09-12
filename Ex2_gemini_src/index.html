@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lê Quốc Việt | Embedded Software Engineer & Researcher</title>
+  <meta name="description" content="Portfolio và hồ sơ năng lực của Lê Quốc Việt - Kỹ sư phần mềm nhúng (Embedded Software Developer), cựu sinh viên Đại học Óbuda, học viên Cao học HUST." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (WEB APP NAVBAR) -->
+  <header class="app-header" id="appHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-badge">LQV</span>
+        <span class="logo-text">Lê Quốc Việt</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="#experience" class="nav-link">Kinh nghiệm</a>
+        <a href="#projects" class="nav-link">Dự án</a>
+        <a href="#education" class="nav-link">Học vấn &amp; Giải thưởng</a>
+        <a href="#skills" class="nav-link">Kỹ năng</a>
+        <a href="#contact" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <a href="res/cv.pdf" download="LeQuocViet_CV.pdf" class="btn btn-outline" title="Tải hồ sơ CV PDF">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Tải CV</span>
+        </a>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu điều hướng">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WEB APP CONTENT -->
+  <main class="app-main">
+    
+    <!-- HERO / PROFILE SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Khung ảnh đại diện (Hiển thị nguyên vẹn tỷ lệ, không crop mất mặt) -->
+        <div class="hero-avatar-pane">
+          <div class="avatar-card-frame">
+            <div class="avatar-aspect-box">
+              <img 
+                src="res/avatar.jpg" 
+                alt="Chân dung Lê Quốc Việt" 
+                class="full-avatar-img"
+              />
+            </div>
+            <div class="avatar-status-pill">
+              <span class="status-indicator"></span>
+              <span>Junior Embedded Developer @ FPT Software</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thông tin tổng quan Hero -->
+        <div class="hero-content-pane">
+          <div class="status-tag">
+            <i class="fa-solid fa-microchip"></i> Kỹ sư Kỹ thuật Điện &amp; Phần mềm Nhúng
+          </div>
+          <h1 class="hero-title">Lê Quốc Việt</h1>
+          <p class="hero-subtitle">
+            Tốt nghiệp Xuất sắc (Outstanding 5/5) Đại học Óbuda (Hungary) &bull; Học viên Thạc sĩ Khoa học Máy tính Đại học Bách khoa Hà Nội (HUST)
+          </p>
+          <p class="hero-desc">
+            Chuyên sâu về phát triển hệ thống nhúng và IoT từ tầng phần mềm ứng dụng, middleware, bare-metal driver đến tích hợp phần cứng. Có kinh nghiệm thực chiến phát triển module MCAL (AUTOSAR) theo tiêu chuẩn MISRA/CERT-C và tham gia nghiên cứu tại Phòng thí nghiệm Xử lý Tín hiệu &amp; Đa phương tiện (SigM Lab - HUST) cùng Học viện Kỹ thuật Quân sự.
+          </p>
+
+          <div class="hero-contact-quick">
+            <span class="quick-info-item"><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</span>
+            <span class="quick-info-item"><i class="fa-solid fa-phone"></i> (+84) 327 744 194</span>
+            <span class="quick-info-item"><i class="fa-solid fa-envelope"></i> lequocvietvshack@gmail.com</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Liên hệ hợp tác
+            </a>
+            <button type="button" class="btn btn-secondary" id="copyEmailBtn" data-email="lequocvietvshack@gmail.com">
+              <i class="fa-regular fa-copy"></i>
+              <span id="copyBtnLabel">Sao chép Email</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-block" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Hồ sơ chuyên môn</h2>
+          <p class="section-subtitle">Định hướng nghiên cứu và phát triển công nghệ nhúng</p>
+        </div>
+        <div class="info-card highlight-card">
+          <p class="card-lead">
+            Tôi theo đuổi lĩnh vực hệ thống nhúng ứng dụng trong ngành công nghiệp ô tô (Automotive), robot tự hành và các nền tảng thiết bị bay không người lái (UAV). Trọng tâm nghiên cứu gồm điều khiển thời gian thực (Real-time control), cảm biến thông minh, giao thức truyền thông an toàn và tích hợp trí tuệ nhân tạo biên (Edge AI).
+          </p>
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <div class="metric-value">5.0 / 5.0</div>
+              <div class="metric-label">Hạng Tốt nghiệp Xuất sắc (Óbuda University)</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">AUTOSAR</div>
+              <div class="metric-label">Phát triển module MCAL (MEM, FEE, MEMACC)</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">TDK 3rd</div>
+              <div class="metric-label">Giải Ba NCKH Sinh viên Toàn Hungary (2025)</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">Học bổng SH</div>
+              <div class="metric-label">Stipendium Hungaricum Scholarship (2022-2026)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section-block section-alt" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Kinh nghiệm làm việc</h2>
+          <p class="section-subtitle">Quá trình công tác và nghiên cứu thực tế</p>
+        </div>
+
+        <div class="timeline-tree">
+          <!-- Item 1: FPT Software -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">2026 &ndash; Hiện tại</span>
+              <span class="timeline-badge">Toàn thời gian</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="role-title">Junior Embedded Developer</h3>
+              <h4 class="company-name">FPT Software &bull; Hà Nội</h4>
+              <ul class="task-list">
+                <li>Nghiên cứu và phát triển tính năng, kiểm thử tầng MCAL theo chuẩn kiến trúc AUTOSAR cho các module bộ nhớ: MEM, FEE, và MEMACC.</li>
+                <li>Thực hiện Unit Testing (UT), Component Testing (CT), cùng hệ thống tài liệu kỹ thuật User Manual / Integration Manual (UM/IM).</li>
+                <li>Đảm bảo chuẩn lập trình nhúng khắt khe của ngành ô tô theo tiêu chuẩn MISRA-C, CERT-C và chỉ số kiểm soát chất lượng mã nguồn HIS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 2: Óbuda University Lab Assistant -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">2024 &ndash; 2026</span>
+              <span class="timeline-badge">Học thuật &amp; Nghiên cứu</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="role-title">Laboratory Assistant</h3>
+              <h4 class="company-name">Khoa KVK &ndash; Đại học Óbuda &bull; Budapest, Hungary</h4>
+              <ul class="task-list">
+                <li>Biên soạn tài liệu và trợ giảng lý thuyết, hướng dẫn thực hành cho các môn học Hệ thống nhúng (vi điều khiển AVR C và vi xử lý 32-bit).</li>
+                <li>Phát triển nguyên mẫu cánh tay robot Braccio 6 bậc tự do (6-DOF) tích hợp Computer Vision: sử dụng Raspberry Pi 4B, Python, Picamera2, MediaPipe và OpenCV để nhận dạng cử chỉ bàn tay thời gian thực, điều khiển qua giao tiếp PySerial.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3: SigM Lab & MTA -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">Concurrently</span>
+              <span class="timeline-badge">Nghiên cứu</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="role-title">Cộng tác viên Nghiên cứu</h3>
+              <h4 class="company-name">SigM Lab (HUST) &amp; Học viện Kỹ thuật Quân sự</h4>
+              <ul class="task-list">
+                <li>Tham gia phối hợp các đề tài nghiên cứu liên quan đến xử lý tín hiệu, hệ thống giám sát và tích hợp thuật toán trên phần cứng nhúng.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section-block" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Dự án kỹ thuật tiêu biểu</h2>
+          <p class="section-subtitle">Các hệ thống nhúng, vi điều khiển và IoT tiêu biểu từ phần cứng đến phần mềm</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-type"><i class="fa-solid fa-code"></i> Firmware Framework</span>
+              <h3 class="project-title">Bare-Metal MCU &amp; Device Driver Framework</h3>
+            </div>
+            <p class="project-summary">
+              Khung điều khiển bare-metal tái sử dụng cho STM32L432KC lập trình trực tiếp mức thanh ghi (register-level) và định nghĩa CMSIS, cung cấp lớp trừu tượng phần cứng không phụ thuộc STM32 HAL.
+            </p>
+            <ul class="project-bullets">
+              <li>Lập trình trình điều khiển ngoại vi UART/USART/LPUART, I2C, SPI, CAN, SAI, USB, TIM, ADC/DAC, DMA ngắt và quản lý năng lượng thấp.</li>
+              <li>Xây dựng máy trạng thái hướng sự kiện (event-driven FSM) cho cảm biến IMU, ToF, xác thực vân tay/RFID, màn hình OLED/TFT.</li>
+            </ul>
+            <div class="tech-stack-row">
+              <span>STM32L4</span>
+              <span>Bare-Metal C</span>
+              <span>CMSIS</span>
+              <span>CAN Bus</span>
+              <span>Register-Level</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-type"><i class="fa-solid fa-wifi"></i> IoT &amp; Edge Gateway</span>
+              <h3 class="project-title">Raspberry Pi Edge Gateway &amp; IoT Platform</h3>
+            </div>
+            <p class="project-summary">
+              Nền tảng biên IoT xây dựng trên Raspberry Pi 4 kết hợp mạng nốt cảm biến từ xa ESP8266 thu thập dữ liệu DHT11, IMU, MQ-gas qua GPIO, I2C/SPI.
+            </p>
+            <ul class="project-bullets">
+              <li>Truyền dữ liệu an toàn qua Wi-Fi bằng MQTT qua TLS với vòng lặp sự kiện non-blocking và xử lý kết nối.</li>
+              <li>Cổng gateway chạy Mosquitto broker và dịch vụ Python lưu trữ dữ liệu vào SQLite, phát hiện bất thường và cung cấp RESTful API bằng FastAPI.</li>
+            </ul>
+            <div class="tech-stack-row">
+              <span>Raspberry Pi</span>
+              <span>ESP8266</span>
+              <span>FastAPI</span>
+              <span>MQTT/TLS</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-type"><i class="fa-solid fa-award"></i> TDK Award Winner</span>
+              <h3 class="project-title">Multi-Technology Presence Management System</h3>
+            </div>
+            <p class="project-summary">
+              Hệ thống phát hiện hiện diện đa công nghệ trong nhà/ngoài trời đạt Giải Ba Hội nghị Khoa học Sinh viên Toàn quốc Hungary (TDK 2025).
+            </p>
+            <ul class="project-bullets">
+              <li>Phân loại thiết bị dựa trên đặc trưng gói tin BLE advertisement, RSSI và tần suất phát; kết hợp thuật toán Multi-node RSSI Fusion ước tính phòng/khu vực.</li>
+              <li>Triển khai trên vi điều khiển ESP32-S3 (Heltec LoRa32 v3), đồng thời quét BLE, xử lý tín hiệu và truyền dữ liệu qua Wi-Fi/MQTT và LoRaWAN với FreeRTOS.</li>
+            </ul>
+            <div class="tech-stack-row">
+              <span>ESP32-S3</span>
+              <span>FreeRTOS</span>
+              <span>LoRaWAN</span>
+              <span>BLE RSSI Fusion</span>
+              <span>MATLAB</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-type"><i class="fa-solid fa-plane"></i> Robotics &amp; UAV</span>
+              <h3 class="project-title">Pixhawk-Based Autonomous UAV Platform</h3>
+            </div>
+            <p class="project-summary">
+              Thiết kế cấu trúc vật lý, kiến trúc dây nối và tích hợp hệ thống điều khiển bay quadcopter 4 cánh quạt carbon-fiber sử dụng flight controller Cube/Pixhawk.
+            </p>
+            <ul class="project-bullets">
+              <li>Cấu hình Mission Planner, cân chỉnh IMU, bộ điều khiển vô tuyến FlySky, định vị GPS vệ tinh và truyền tin telemetry từ xa.</li>
+              <li>Cân chỉnh các vòng lặp điều khiển phản hồi PID cho hệ thống cân bằng và chuyển động bay ổn định.</li>
+            </ul>
+            <div class="tech-stack-row">
+              <span>Cube / Pixhawk</span>
+              <span>Mission Planner</span>
+              <span>PID Tuning</span>
+              <span>Telemetry</span>
+              <span>Avionics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & HONORS SECTION -->
+    <section class="section-block section-alt" id="education">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Học vấn &amp; Thành tích</h2>
+          <p class="section-subtitle">Nền tảng đào tạo chính quy và các giải thưởng đạt được</p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- Degree 1 -->
+          <div class="info-card">
+            <div class="card-badge primary-badge">Cao học (M.Sc.)</div>
+            <h3 class="edu-title">Đại học Bách khoa Hà Nội (HUST)</h3>
+            <p class="edu-field">Thạc sĩ Khoa học Máy tính (Chương trình ACMI)</p>
+            <span class="edu-time"><i class="fa-regular fa-calendar"></i> 04/2026 &ndash; Hiện tại</span>
+            <p class="edu-detail">Nghiên cứu chuyên sâu về kiến trúc tính toán thông minh, xử lý tín hiệu và điều khiển nhúng tự động.</p>
+          </div>
+
+          <!-- Degree 2 -->
+          <div class="info-card highlight-border">
+            <div class="card-badge success-badge">Hạng Xuất sắc (5/5)</div>
+            <h3 class="edu-title">Đại học Óbuda (Budapest, Hungary)</h3>
+            <p class="edu-field">Cử nhân Kỹ thuật Điện (Chuyên ngành Đo lường &amp; Tự động hóa)</p>
+            <span class="edu-time"><i class="fa-regular fa-calendar"></i> 09/2022 &ndash; 02/2026</span>
+            <p class="edu-detail">GPA: <strong>4.06 / 5.0</strong>. Tốt nghiệp loại Tối ưu (Outstanding với điểm Khóa luận $5/5$). Nhận toàn phần Học bổng Chính phủ Hungary (Stipendium Hungaricum).</p>
+          </div>
+
+          <!-- Degree 3 -->
+          <div class="info-card">
+            <div class="card-badge neutral-badge">Cử nhân (B.Sc.)</div>
+            <h3 class="edu-title">Đại học Quốc gia Hà Nội (VNU)</h3>
+            <p class="edu-field">Khoa học Dữ liệu &amp; Máy tính</p>
+            <span class="edu-time"><i class="fa-regular fa-calendar"></i> 09/2021 &ndash; 09/2022</span>
+            <p class="edu-detail">GPA: <strong>3.22 / 4.0</strong>. Trang bị nền tảng toán giải tích, đại số tuyến tính, cấu trúc dữ liệu &amp; giải thuật, lập trình hệ thống Linux.</p>
+          </div>
+        </div>
+
+        <!-- Awards Accordion / List -->
+        <div class="awards-box">
+          <h3 class="awards-header"><i class="fa-solid fa-trophy"></i> Học bổng &amp; Giải thưởng nổi bật</h3>
+          <div class="awards-list">
+            <div class="award-item">
+              <span class="award-year">2022 &ndash; 2026</span>
+              <div class="award-desc">
+                <strong>Học bổng Stipendium Hungaricum:</strong> Học bổng danh giá nhất của Chính phủ Hungary tài trợ toàn bộ học phí, sinh hoạt phí, bảo hiểm và nhà ở suốt 4 năm đại học.
+              </div>
+            </div>
+            <div class="award-item">
+              <span class="award-year">2025</span>
+              <div class="award-desc">
+                <strong>Giải Ba Hội nghị Nghiên cứu Khoa học Sinh viên (TDK - Tudományos Diákkör):</strong> Công trình nghiên cứu hệ thống định vị sự hiện diện đa nốt không dây sử dụng BLE và LoRaWAN.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section-block" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Năng lực kỹ thuật</h2>
+          <p class="section-subtitle">Các công nghệ, tiêu chuẩn và công cụ lập trình nhúng chuyên môn</p>
+        </div>
+
+        <div class="skills-categorized-grid">
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="category-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="category-title">Embedded &amp; Firmware</h3>
+            <ul class="skill-checklist">
+              <li>Embedded C, C++</li>
+              <li>AUTOSAR MCAL (MEM, FEE, MEMACC)</li>
+              <li>MISRA-C, CERT-C, HIS Metrics</li>
+              <li>CMSIS &amp; Register-Level Drivers</li>
+              <li>FreeRTOS, Finite State Machines (FSM)</li>
+              <li>AVR C (ATmega64/128), STM32 (ARM Cortex-M)</li>
+            </ul>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="category-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="category-title">Protocols &amp; Hardware</h3>
+            <ul class="skill-checklist">
+              <li>CAN Bus, SPI, I2C, UART/USART</li>
+              <li>LoRaWAN, Wi-Fi, BLE (Advertisement/RSSI)</li>
+              <li>PCB Design &amp; Hardware Interfacing</li>
+              <li>Verilog, SystemVerilog</li>
+              <li>IMU, ToF Sensors, Oscilloscope, Logic Analyzer</li>
+            </ul>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="category-icon"><i class="fa-solid fa-server"></i></div>
+            <h3 class="category-title">IoT, Software &amp; Tools</h3>
+            <ul class="skill-checklist">
+              <li>Python (FastAPI, PySerial, OpenCV, MediaPipe)</li>
+              <li>Raspberry Pi 4, ESP8266, ESP32-S3</li>
+              <li>MQTT over TLS, Mosquitto, REST APIs</li>
+              <li>MATLAB, SQLite, MySQL, Shell Script (Linux)</li>
+              <li>Git, Mission Planner, Unit Test (UT/CT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT SECTION -->
+    <section class="section-block section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Thông tin liên hệ &amp; Kết nối</h2>
+          <p class="section-subtitle">Sẵn sàng trao đổi về các dự án kỹ thuật, cơ hội nghề nghiệp và nghiên cứu</p>
+        </div>
+
+        <div class="contact-card-wrapper">
+          <div class="contact-details-col">
+            <h3 class="contact-col-title">Kênh liên lạc chính thức</h3>
+            <div class="contact-links-stack">
+              <a href="mailto:lequocvietvshack@gmail.com" class="contact-link-row">
+                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                <div class="contact-info">
+                  <span class="contact-label">Email trực tiếp</span>
+                  <span class="contact-value">lequocvietvshack@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/LeQuocViet" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
+                <div class="contact-info">
+                  <span class="contact-label">Hồ sơ LinkedIn</span>
+                  <span class="contact-value">linkedin.com/in/LeQuocViet</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <a href="tel:+84327744194" class="contact-link-row">
+                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                <div class="contact-info">
+                  <span class="contact-label">Điện thoại / Zalo</span>
+                  <span class="contact-value">(+84) 327 744 194</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <div class="contact-link-row static-row">
+                <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div class="contact-info">
+                  <span class="contact-label">Địa bàn hoạt động</span>
+                  <span class="contact-value">Hà Nội, Việt Nam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-action-col">
+            <h3 class="contact-col-title">Tải hồ sơ năng lực (CV)</h3>
+            <p class="contact-note">
+              Bản CV đính kèm chứa thông tin chi tiết về các dự án thanh ghi ARM, kết quả kiểm thử tiêu chuẩn AUTOSAR MCAL và bảng điểm đại học.
+            </p>
+            <div class="download-action-box">
+              <a href="res/cv.pdf" download="LeQuocViet_CV.pdf" class="btn btn-primary btn-large">
+                <i class="fa-solid fa-file-pdf"></i> Tải xuống CV chính thức (PDF)
+              </a>
+              <button type="button" class="btn btn-outline btn-large" id="copyEmailBtn2" data-email="lequocvietvshack@gmail.com">
+                <i class="fa-regular fa-clone"></i> Sao chép địa chỉ Email
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="footer-copyright">&copy; 2026 <strong>Lê Quốc Việt</strong>. All rights reserved.</p>
+        <p class="footer-sub">Hệ thống Portfolio Card &amp; Web App hồ sơ năng lực chuyên môn.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" title="Cuộn lên đầu trang">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="toast-popup" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Đã sao chép email lequocvietvshack@gmail.com vào clipboard!</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
